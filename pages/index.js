@@ -25,7 +25,7 @@ export default function Home(){
                    </div>
                        <div className="h-20 w-[2px] bg-gray-300"></div>
                    <div>
-                       <button onClick={() => {router.push("/")}} className="mt-2 text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Name Card</button>
+                       <button onClick={() => {router.push("/")}} className="mt-2 text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Name Cvzlhard</button>
                    </div>
             </div>
             
