@@ -1,48 +1,40 @@
-import { useState } from "react";
+import Image from "next/image";
+import Muur from '../public/Muur.jpg';
+import { useRouter } from "next/router";
 
-export default function News() {
-    const [grid, setGrid] = useState(true);
+export default function Home(){
+    const router = useRouter()
 
-    const data = [
-        {
-            id : 1,
-            title : "Test 1",
-            text : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        },
-        {
-            id: 2,
-            title: "Test 2",
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        },
-        {
-            id: 3,
-            title: "Test 3",
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        },
-        {
-            id: 4,
-            title: "Test 4",
-            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        },
-        
-    ];
-
-    return (
-        <div className="w-full h-screen flex flex-col align items-center bg-white">
-            <div className="w-2/3 h-full p-8 drop-shadow-2xl">
-                <div className="w-full h-16 flex items-center justify-between ">
-                    <h1 className="text-3xl text-black font-bold">Нийтлэлүүд</h1>
-
-                    <button onClick={() => setGrid(!grid)} className="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-800">{grid ? "Жагсаалт харах руу шилжих" : "Grid View руу шилжих"}</button>
-                </div>
-                
-                <div className={grid == true ? "grid grid-cols-2 gap-4" : "space-y-4"}>
-                    {data.map((things) => (
-                        <div key={things.id} className="border-2 border-black rounded-xl p-4 flex flex-col justify-evenly text-black text-xl">
-                            <h1 className="font-bold text-2xl mb-3">{things.title}</h1>
-                            <h1>{things.text}</h1>
-                        </div>
-                    ))}
+    return(
+        <div>
+            <div className="w-full h-auto flex justify-around">
+                   <div className="flex items-center">
+                       <button onClick={() => {router.push("/")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Dashboard</button>
+                   </div>
+                   <div className="h-20 w-[2px] bg-gray-300"></div>
+                   <div className="flex items-center">
+                       <button onClick={() => {router.push("/")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Our Blog</button>
+                   </div>
+                       <div className="h-20 w-[2px] bg-gray-300"></div>
+                   <div className="flex items-center">
+                       <button onClick={() => {router.push("/")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Easy CV</button>
+                   </div>
+                       <div className="h-20 w-[2px] bg-gray-300"></div>
+                   <div className="flex items-center">
+                       <button onClick={() => {router.push("/")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">CV</button>
+                   </div>
+                       <div className="h-20 w-[2px] bg-gray-300"></div>
+                   <div>
+                       <button onClick={() => {router.push("/")}} className="mt-2 text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Name Card</button>
+                   </div>
+            </div>
+            
+            <div className="flex items-center justify-center static">
+                <Image className="w-full h-screen"  src={Muur}  alt="Muur" object-cover/>
+                <div className="absolute w-11/12">
+                    <h1 className="mb-2 text-white text-7xl">Bie Daalt</h1>
+                    <p className="mt-10 text-white">Busad hiisen project ruu shiljin orohig husvel deer ~bga button deer darn uu.Bayrlalaa.
+                    </p>
                 </div>
             </div>
         </div>
