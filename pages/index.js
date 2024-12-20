@@ -7,7 +7,7 @@ export default function Home(){
 
     return(
         <div>
-            <div className="w-full h-auto flex justify-around">
+            <div className="w-full h-auto flex items-center justify-around">
                    <div className="flex items-center">
                        <button onClick={() => {router.push("/")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Dashboard</button>
                    </div>
@@ -17,15 +17,15 @@ export default function Home(){
                    </div>
                        <div className="h-20 w-[2px] bg-gray-300"></div>
                    <div className="flex items-center">
-                       <button onClick={() => {router.push("/")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Easy CV</button>
+                       <button onClick={() => {router.push("/task2")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Easy CV</button>
                    </div>
                        <div className="h-20 w-[2px] bg-gray-300"></div>
                    <div className="flex items-center">
-                       <button onClick={() => {router.push("/")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">CV</button>
+                       <button onClick={() => {router.push("/cv")}} className="text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">CV</button>
                    </div>
                        <div className="h-20 w-[2px] bg-gray-300"></div>
                    <div>
-                       <button onClick={() => {router.push("/")}} className="mt-2 text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Name Cvzlhard</button>
+                       <button onClick={() => {router.push("/nameCard")}} className="mt-2 text-white w-40 font-bold h-16 rounded-xl bg-sky-600 hover:bg-sky-500">Name Card</button>
                    </div>
             </div>
             
